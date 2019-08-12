@@ -1,9 +1,9 @@
-export const tabs = [
-    'Roles and people',
-    'Epic and issues',
-    'Progress',
-    'Config'
-];
+export const tabs = {
+    'Roles and people' : 'AA',
+    'Epic and issues' : 'BB',
+    'Progress' : 'CC',
+    'Config' : 'DD'
+};
 
   export default {
     'tabs' : tabs

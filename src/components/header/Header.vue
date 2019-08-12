@@ -2,7 +2,7 @@
     <div>
         <table>
             <tr>
-                <td v-for="tab in tabs" :key="tab">
+                <td v-for="tab in  Object.keys(tabs)" :key="tab">
                     <HeaderButton v-bind:text="tab" v-on:switch-to="buttonClicked" :key="newtab"/>
                 </td>
             </tr>
@@ -20,11 +20,11 @@ export default {
     HeaderButton
   },
   props : {
-    tabs : Array
+    tabs : Object
   },
   methods : {
     buttonClicked(newtab) {
-      this.$emit('switch-to', newtab);
+      this.$emit('switch-to', this.tabs[newtab]);
     }
   }
 }
